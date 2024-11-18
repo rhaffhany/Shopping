@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="shoppingCart.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="viewport">
+        <div id="js-scroll-content">
+
+            <div id="shoppingCartPage">
+                <div class="container">
+                    <div class="row mt-5">
+
+                        <div class="col-md-4 col-sm-12">
+                            <h2 class="fw-bold">Shopping Cart</h2>
+                            <a href="index.html" class="text-decoration-none"><i class="fa-solid fa-arrow-left arrow-icon"></i>Continue Shopping</a>
+                        </div>
+
+                        <div class="row mt-4">
+
+                            <div class="col-md-8 col-sm-12">
+                                <table class="table table-light bg-light " id="cart">
+                                    <thead>
+                                        <th class="opacity-0 ">Image</th>
+                                        <th class="opacity-0 ">product name</th>
+                                        <th>Unit Price</th>
+                                        <th>QTY</th>
+                                        <th>Total SAR</th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody>
+                                        <!-- js -->
+                                    </tbody>
+                                </table> 
+                            </div> 
+
+                            <div class="col-md-4  ">
+                                <div class="bg-light p-4">
+                                    <h5>Do you have a voucher? <span style="font-size: 15px  ;">(Optional)</span></h5>
+                                <div class="input-group mb-3">
+                                  <input type="text" class="form-control rounded-0" placeholder="Enter the code">
+                                  <button class="btn btn-dark rounded-0">Redeem</button>
+                                </div>
+                                <div class="summary">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="m-0" >Subtotal</h5>
+                                        <h6 class="m-0" id="subtotal"></h6>
+                                    </div>
+                                
+                                  <div class="d-flex justify-content-between">
+                                    <span style="font-size: 13px  ;" >Shipping</span>
+                                    <span><p id="shipping" style="font-size: 13px  ;">10,91 SAR</p></span>
+                                  </div>
+                                  
+                                  <div class="d-flex justify-content-between mt-4">
+                                    <h5>Total<span class="px-1" style="font-size: 13px  ;">(VAT included.)</span></h5>
+                                    <p id="total"></p>
+                                  </div>
+                                 
+
+                                </div>
+                                <button class="btn btn-dark btn-block w-100 rounded-0 checkout" >Safe to checkout</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Viewed-->
+            <div id="recentlyViewed">
+                <div class="container mb-4">
+
+                    <div class="row mt-5 justify-content-center">
+    
+                        <div class="col-12 text-center">
+                            <h4>Recently Viewed</h4>
+                            <h4>Products</h4>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img1.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Windsor White Oak</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img2.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sicily Grey Décor 30×60</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img3.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sardinia White</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img4.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sicily Grey 30×60</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>        
+                </div>
+            </div>
+
+             <!-- footer -->
+            <footer id="footer">
+                <div class="container h-auto">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="logo">
+                                <img src="logo/logoWhite.png" alt="Logo" />
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="footer-links">
+                                <ul>
+                                    <li><h3>Products</h3></li>
+                                    <li><a href="#">Tile Stude</a></li>
+                                    <li><a href="#">Stone</a></li>
+                                    <li><a href="#">Cement</a></li>
+                                    <li><a href="#">Soft Furnish</a></li>
+                                </ul>
+                                <ul>
+                                    <li><h3>Services</h3></li>
+                                    <li><a href="#">Mockup & Render</a></li>
+                                    <li><a href="#">Product Advisor</a></li>
+                                    <li><a href="#">Interior Design</a></li>
+                                </ul>
+                                <ul>
+                                    <li><h3>Contact Information</h3></li>
+                                    <li><a href="#">088 Air Plaza, Suite 1001, Al Bustan Rd, Jeddah, Saudi 21494</a></li>
+                                    <li><a href="#">Reach Brands</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="social-media d-flex justify-content-evenly w-25">
+                                <a href="#"><i class="fab fa-facebook-f " ></i></a>
+                                <a href="#"><i class="fab fa-twitter "></i></a>
+                                <a href="#"><i class="fab fa-instagram "></i></a>
+                            </div>
+                            
+                           
+                           
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <p style="font-size: 9px;" class="mb-0">Copyright © 2022 | All Rights Reserved.</p>
+                            <p style="font-size: 9px;" class="mb-0">Created with love by thecreation.design</p>
+                        </div>
+                            
+                    </div>
+                
+                    
+                </div>
+              
+            </footer>
+
+
+        </div>
+    </div>
+    
+
+
+    <script src="shoppingCart.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #f4f4f4;
+    --border-color: #ccc;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --input-border-radius: 5px;
+    --button-hover-bg: #333;
+    --input-padding: 8px;
+    --spacing: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+header h2 {
+    margin-top: 0;
+    font-weight: 800;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: rgb(71, 71, 71);
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-section, .payment-section, .summary-section {
+    flex-basis: 33%;
+    margin: 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    border: 1px solid #FAFAFA;
+    border-radius: 10px;
+}
+
+.form-section h3, .payment-section h3, .summary-section h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gender-button {
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.gender-button[data-value="mr"] {
+    margin-left: -4.1px;
+}
+
+.gender-button.active {
+    background-color: #000; 
+    color: white;
+}
+
+.gender-button:hover {
+    background-color: #f4f4f4;
+}
+
+.gender-button.active:hover {
+    background-color: #000;
+}
+
+.gender-button:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: -5px;
+}
+
+input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"][name="street"],
+input[type="text"][name="shipping_street"] {
+    width: 67%;
+    float: left;
+}
+
+input[type="text"][name="house"],
+input[type="text"][name="shipping_house"] {
+    width: 30%;
+    float: right;
+}
+
+input[type="text"][name="postcode"],
+input[type="text"][name="shipping_postcode"] {
+    width: 45%;
+    float: left;
+}
+
+input[type="text"][name="location"],
+input[type="text"][name="shipping_location"] {
+    width: 52%;
+    float: right;
+}
+
+.payment-section,
+.summary-section {
+    height: fit-content;
+}
+
+.payment-info input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ddd;
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.payment-info input[type="radio"]:checked {
+    background-color: black;
+    border-color: white;
+}
+
+.personal-info p,
+.personal-info .checkbox-group p {
+    margin-bottom: 1rem;
+    font-size: smaller;
+    color: hsl(0, 0%, 51%);
+}
+
+.summary-section p {
+    color: #828282;
+}
+
+.personal-info .checkbox-group p {
+    margin-top: 15px;
+}
+
+.payment-info {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.payment-info img {
+    margin-right: 10px; 
+}
+
+.payment-info input[type="radio"] {
+    float: right;
+    margin-top: .6rem;
+}
+
+.credit-card-info [type="text"][name="cc_expiry"] {
+    width: 45%;
+    float: left;
+}
+
+.credit-card-info input[type="text"][name="cc_cvc"] {
+    width: 52%;
+    float: right;
+}
+
+.credit-card-info {
+    margin-bottom: 20px;
+}
+
+.credit-card-info input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.order-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-item p {
+    margin-bottom: 10px;
+}
+
+.order-item span {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+#price {
+    float: right;
+}
+
+#voucher {
+    margin-top: 2rem;
+}
+
+.article-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+input[type="text"][name="voucher"] {
+    width: 50%;
+}
+
+.summary-section button[type="button"] {
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 7px;
+    width: 45%;
+    margin-bottom: 2.5rem;
+}
+
+.summary-section button[type="button"]:hover {
+    background-color: #333;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    margin-top: -2rem;
+}
+
+.terms input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transform: translateY(3px);
+}
+
+@media (max-width: 992px) {
+    .form-section, 
+    .payment-section, 
+    .summary-section {
+        flex-basis: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+    }
+
+    input[type="text"][name="street"],
+    input[type="text"][name="shipping_street"],
+    input[type="text"][name="house"],
+    input[type="text"][name="shipping_house"],
+    input[type="text"][name="postcode"],
+    input[type="text"][name="shipping_postcode"],
+    input[type="text"][name="location"],
+    input[type="text"][name="shipping_location"] {
+        width: 100%; 
+        float: none; 
+    }
+
+    .credit-card-info [type="text"][name="cc_expiry"],
+    .credit-card-info input[type="text"][name="cc_cvc"] {
+        width: 100%; 
+        float: none; 
+    }
+
+    .payment-info p {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
+
+    .order-item {
+        flex-direction: column; 
+    }
+
+    .article-image {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .summary-section button[type="button"] {
+        width: 100%; 
+    }
+}

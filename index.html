@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="shoppingCart.html">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="viewport">
+        <div id="js-scroll-content">
+            <!-- logo -->
+            <div class="logo text-center mt-3">
+                <img src="logo/Vector.png" alt="logo">
+            </div>
+
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg " >
+                <div class="container ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="row align-items-center justify-content-between py-2  w-100">
+
+                        <div class="col-auto vectors">
+                            <img src="img/vectors/Search.png" alt="search" class="icon-search" >
+                        </div>
+
+    
+                        <div class="col-md-5 navlinks collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item"><a href="#Home">HOME</a></li>
+                                <li class="nav-item"><a href="#Spaces">SPACES</a></li>
+                                <li class="nav-item"><a href="#Products">PRODUCTS & SERVICES</a></li>
+                                <li class="nav-item"><a href="#Showrooms">SHOWROOMS</a></li>
+                                <li class="nav-item"><a href="#Company">COMPANY</a></li>
+                                <li class="nav-item"><a href="#Media">MEDIA</a></li>
+                                <li class="nav-item"><a href="#Contact">CONTACT</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-auto vectors d-flex">
+                            <a href="shoppingCart.html" class="text-decoration-none ">
+                                <!-- <button class="btn btn-danger rounded-circle "><span>0</span></button> -->
+                                <img src="img/vectors/Cart.png" alt="Cart" class="cart-badge  ">
+                            </a>
+                            <img src="img/vectors/fav.png" alt="fav">
+                            <img src="img/vectors/person.png" alt="person">
+                        </div>
+                       
+                    </div>
+                </div>
+            </nav>
+
+            <!-- separte -->
+            <div class="separte d-flex align-items-center justify-content-between ">
+                <div class="container">
+                    <div class="navigate position-relative ">
+                        <a href="#Home">Home</a>
+                        <img src="img/vectors/arrow.png" alt="arrow">
+                        <a href="#Table">Table</a>
+                        <img src="img/vectors/arrow.png" alt="arrow">
+                        <a href="#ProductName" class="productName ">Product Name</a>        
+                    </div>
+                </div>
+            </div>
+
+            <!-- page1 - Product -->
+             <div id="Product">
+                <div class="container my-5">
+                    <div class="row">
+
+                        <div class="col-md-6 img-products">
+                            <img src="img/Product.png" class="product-thumb w-100 main-img " alt="product" data-name="Luxora Marble Living Set" data-price="200,00 SAR">
+                            
+                            <div class="products text-center mt-3">
+                                <img src="img/product1.png"  alt="product1" class="product-thumb" data-name="Elegance Rest Suite" data-price="150,00 SAR">
+                                <img src="img/product2.png" alt="product2" class="product-thumb" data-name="Zen Marble Bath" data-price="199,50 SAR">
+                                <img src="img/product3.png" alt="product3" class="product-thumb" data-name="Palm Serenity Retreat" data-price="250,75 SAR">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 offset-1 p-0 mt-5">
+                            <div>
+                                <h2 class="fw-bolder m-0" id="productName"></h2>
+                                <h5 id="productPrice"></h5>
+                                <p class="mb-5">Product Short Description senectus et netus et malesuada fames ac turpis egestas. Vesitbulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend</p>
+                            </div>
+                            <div class="cart d-flex">                                
+                                <div class="quantity w-25 p-3 d-flex align-items-center justify-content-between">
+                                    <i class="fa-solid fa-minus minus"></i> 
+                                    <span id="counter">0</span> 
+                                    <i class="fa-solid fa-plus plus"></i>
+                                </div>
+                                <button class="btn btn-dark rounded-0 mx-2 cartButton">Add To Cart</button>
+                                <div class="favourite d-flex align-items-center justify-content-center mx-2 p-3"><img src="img/vectors/heart 1.png" alt="heart"></div>
+                            </div>
+                            <div class="list mt-2">
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Desc -->
+            <div id="desc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mt-5">
+                            <div class="title text-center">
+                               <a href="#">Description</a>
+                               <a href="#">Details</a>
+                               <a href="#">Reviews(0)</a>
+                            </div>
+                            <div class="col-md-9 mx-auto mt-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare euismod arcu, ac laoreet metus pulvinar feugiat. Praesent in feugiat ante, a dictum nunc. Pellentesque convallis tortor quis purus finibus aliquet. In hac habitasse platea dictumst. Proin vestibulum ante ac faucibus tristique. Integer quis efficitur dolor, at dignissim dolor.</p>
+                            </div>
+                        </div>  
+                    </div>        
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="container">
+
+                <div class="row mt-5 justify-content-center">
+
+                    <div class="col-12 text-center">
+                        <h4>Related</h4>
+                        <h4>Products</h4>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card rounded-0 h-100">
+                            <img src="img/img1.png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Windsor White Oak</h6>
+                                <p><span>449.99 SAR</span> 312.49 SAR</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card rounded-0 h-100">
+                            <img src="img/img2.png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Sicily Grey Décor 30×60</h6>
+                                <p><span>449.99 SAR</span> 312.49 SAR</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card rounded-0 h-100">
+                            <img src="img/img3.png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Sardinia White</h6>
+                                <p><span>449.99 SAR</span> 312.49 SAR</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <div class="card rounded-0 h-100">
+                            <img src="img/img4.png" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h6>Sicily Grey 30×60</h6>
+                                <p><span>449.99 SAR</span> 312.49 SAR</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>        
+            </div>
+            
+            <!-- Recently Viewed-->
+            <div id="recentlyViewed">
+                <div class="container mb-4">
+
+                    <div class="row mt-5 justify-content-center">
+    
+                        <div class="col-12 text-center">
+                            <h4>Recently Viewed</h4>
+                            <h4>Products</h4>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img1.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Windsor White Oak</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img2.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sicily Grey Décor 30×60</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img3.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sardinia White</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-sm-6 col-md-3 mb-4">
+                            <div class="card rounded-0 h-100">
+                                <img src="img/img4.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <h6>Sicily Grey 30×60</h6>
+                                    <p><span>449.99 SAR</span> 312.49 SAR</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>        
+                </div>
+            </div>
+           
+
+             <!-- footer -->
+            <footer id="footer">
+                <div class="container h-auto">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="logo">
+                                <img src="logo/logoWhite.png" alt="Logo" />
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="footer-links">
+                                <ul>
+                                    <li><h3>Products</h3></li>
+                                    <li><a href="#">Tile Stude</a></li>
+                                    <li><a href="#">Stone</a></li>
+                                    <li><a href="#">Cement</a></li>
+                                    <li><a href="#">Soft Furnish</a></li>
+                                </ul>
+                                <ul>
+                                    <li><h3>Services</h3></li>
+                                    <li><a href="#">Mockup & Render</a></li>
+                                    <li><a href="#">Product Advisor</a></li>
+                                    <li><a href="#">Interior Design</a></li>
+                                </ul>
+                                <ul>
+                                    <li><h3>Contact Information</h3></li>
+                                    <li><a href="#">088 Air Plaza, Suite 1001, Al Bustan Rd, Jeddah, Saudi 21494</a></li>
+                                    <li><a href="#">Reach Brands</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="social-media d-flex justify-content-evenly w-25">
+                                <a href="#"><i class="fab fa-facebook-f " ></i></a>
+                                <a href="#"><i class="fab fa-twitter "></i></a>
+                                <a href="#"><i class="fab fa-instagram "></i></a>
+                            </div>
+                            
+                           
+                           
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <p style="font-size: 9px;" class="mb-0">Copyright © 2022 | All Rights Reserved.</p>
+                            <p style="font-size: 9px;" class="mb-0">Created with love by thecreation.design</p>
+                        </div>
+                            
+                    </div>
+                
+                    
+                </div>
+              
+            </footer>
+
+
+        </div>
+    </div>
+    
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

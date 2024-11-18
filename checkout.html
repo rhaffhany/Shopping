@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Check Out</h2>
+            <a href="shoppingCart.html">← Go To Cart</a>
+        </header>
+        <div class="sections">
+            <!-- Left Section (Personal Info) -->
+            <div class="form-section">
+                <form>
+                    <div class="personal-info">
+                        <div class="radio-group">
+                            <button type="button" class="gender-button" data-value="mrs">Mrs.</button>
+                            <button type="button" class="gender-button" data-value="mr">Mr.</button>
+                            <input type="radio" name="gender" value="mrs" id="mrs" hidden checked>
+                            <input type="radio" name="gender" value="mr" id="mr" hidden>
+                        </div>
+                        
+                        
+
+                        <div class="form-group">
+                            <input type="text" name="first_name" placeholder="First name*" required>
+                            <input type="text" name="last_name" placeholder="Last name*" required>
+                            <input type="email" name="email" placeholder="E-Mail*" required>
+                            <input type="text" name="street" placeholder="Street*" required>
+                            <input type="text" name="house" placeholder="House*" required>
+                            <input type="text" name="postcode" placeholder="PostCode*" required>
+                            <input type="text" name="location" placeholder="Location*" required>
+                            <select name="country" id="countrySelect" required>
+                                <option value="" disabled selected>Select Country</option>
+                              </select>
+                            <input type="tel" name="phone" placeholder="Phone Number*" required>
+                        </div>
+                       <p>*Required field</p> 
+
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="create_account"> Create a customer account now and benefit from many advantages.</label>
+                            <p>ⓘThe password will be sent to you by email</p>
+                            <label><input type="checkbox" name="different_shipping"> Shipping Address is Different</label>
+                        </div>
+
+                        <!-- Shipping Address if different -->
+                        <div class="shipping-info">
+                            <input type="text" name="shipping_first_name" placeholder="First name*" id="shipping_first_name">
+                            <input type="text" name="shipping_last_name" placeholder="Last name*" id="shipping_last_name">
+                            <input type="text" name="shipping_street" placeholder="Street*" id="shipping_street">
+                            <input type="text" name="shipping_house" placeholder="House*" id="shipping_house">
+                            <input type="text" name="shipping_postcode" placeholder="PostCode*" id="shipping_postcode">
+                            <input type="text" name="shipping_location" placeholder="Location*" id="shipping_location">
+                            <select name="country" id="countrySelect">
+                                <option value="" disabled selected>Select Country</option>
+                              </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Center Section (Payment Info) -->
+            <div class="payment-section">
+                <form>
+                    <div class="payment-info">
+                        <table>
+                          <tr>
+                            <td><img src="img/paypal.png"></td>
+                            <td><p>PayPal</p></td>
+                            <td><label><input type="radio" name="payment" value="paypal"></label></td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/paypal.png"></td>
+                            <td><p>PayPal Plus</p></td>
+                            <td><label><input type="radio" name="payment" value="paypal_plus"></label></td>
+                          </tr>
+                          <tr>
+                            <td><img src="img/investment.png"></td>
+                            <td><p>Investment Bank</p></td>
+                            <td><label><input type="radio" name="payment" value="investment_bank"></label></td>
+                          </tr>
+                        </table>
+                      </div>
+
+                    <div class="credit-card-info">
+                        <input type="text" name="cc_number" placeholder="Credit card number">
+                        <input type="text" name="cc_expiry" placeholder="Expiry Date">
+                        <input type="text" name="cc_cvc" placeholder="CVC/CVV">
+                        <input type="text" name="cc_holder" placeholder="Name of Cardholder">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Section (Order Summary) -->
+            <div class="summary-section">
+
+                <table>
+                    <tr>
+                      <th>Article</th>
+                      <th></th>
+                      <th>Total SAR</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/checkout1.png" alt="Article 1" class="article-image">
+                        <td>
+                            <strong>1x</strong>
+                            <p>Lorem</p>
+                        <strong>Lorem Ipsum</strong>
+                        <p>Ipsum</p>
+                        <td>
+                      <strong id="price">690.00</strong>
+                        </td>
+                      </td>
+                      
+                    </td>
+                    
+                    </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="img/checkout1.png" alt="Article 1" class="article-image">
+                    <td>
+                        <strong>1x</strong>
+                        <p>Lorem</p>
+                    <strong>Lorem Ipsum</strong>
+                    <p>Ipsum</p>
+                    <td>
+                  <strong id="price">690.00</strong>
+                    </td>
+                  </td>
+                </td>
+                </tr>
+
+            </tr>
+            <tr>
+              <td>
+                <img src="img/checkout1.png" alt="Article 1" class="article-image">
+                <td>
+                    <strong>1x</strong>
+                    <p>Lorem</p>
+                <strong>Lorem Ipsum</strong>
+                <p>Ipsum</p>
+                <td>
+              <strong id="price">690.00</strong>
+                </td>
+              </td>
+            </td>
+            </tr>
+
+             </table>
+                <label for="voucher">Do you have a voucher?</label><br>
+                <input type="text" id="voucher" name="voucher" placeholder="Enter the code">
+                <button type="button">Redeem</button>
+                <table>
+                    <tbody>
+                      <tr>
+                        <td>Subtotal</td>
+                        <td></td>
+                        <td id="subtotal">0.00 SAR</td>
+                    </tr>
+                    <tr>
+                        <td><p>Shipment</p></td>
+                        <td></td>
+                        <td><p id="shipping">0.00 SAR</p></td> 
+                    </tr>            
+                        <tr>
+                            <td colspan="2"><p>Delivery time 2 - 4 working days</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="checkout-btn" type="button" style="width: 100%">Checkout</button>
+                <label class="terms">
+                    <input type="checkbox"> <p>T&C is simply dummy text of the printing and typesetting industry</p>
+                </label>
+                <table>
+                    <table>
+                        <tbody>
+                          <tr>
+                            <td id="total"><strong>Total</strong><br><p>(VAT)</p></td>
+                            <td></td>
+                            <td id="vat" style="text-align: right;"><strong>0.00 SAR</strong><br><p>0.00 SAR</p></td> 
+                          </tr>
+                        </tbody>
+                      </table>
+        </div>
+    </div>
+</div>
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
